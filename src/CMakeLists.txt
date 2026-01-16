@@ -115,6 +115,8 @@ else()
     add_compiler_option_if_supported("-std=c++17")
 endif()
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-rtti")
+
 if(MSVC)
     add_compile_options(/W3)
     foreach(flag /permissive-)
